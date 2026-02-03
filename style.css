@@ -412,7 +412,7 @@ body {
     
     .table-1 {
         min-width: 360px;
-        font-size: 5px;
+        font-size: 11px;
     }
     
     .table-1 th,
@@ -423,7 +423,7 @@ body {
     }
     
     .table-1 th {
-        font-size: 11px;
+        font-size: 5px;
         padding: 5px 4px;
     }
     
