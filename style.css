@@ -155,7 +155,11 @@ body {
     margin-top: 20px;
 }
 
-/* Media Query for Tablet (768px - 1024px) */
+/* ... កូដដើមផ្សេងៗទៀត ... */
+
+/* ========== MEDIA QUERIES (តម្រៀបតាមទំហំពីធំទៅតូច) ========== */
+
+/* 1. Tablet (769px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
     .table-container {
         width: 85%;
@@ -187,8 +191,8 @@ body {
     }
 }
 
-/* Media Query for Mobile (up to 768px) */
-@media (max-width: 768px) {
+/* 2. Medium Mobile (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
     .table-container {
         width: 95%;
         margin: 10px auto;
@@ -210,33 +214,32 @@ body {
         margin-bottom: 0;
     }
     
-    /* កែពិសេសសម្រាប់ 414px: មិនឱ្យ logo លោតទៅក្រោម */
     .company-logo-container {
-        flex-direction: row; /* រក្សាទុកជាជួរផ្ដេក */
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 20px;
         padding: 15px 10px;
-        flex-wrap: nowrap; /* មិនឱ្យវាបត់ចុះក្រោម */
+        flex-wrap: nowrap;
     }
     
     .company-logo {
         width: 80px;
         height: 80px;
-        flex-shrink: 0; /* កុំឱ្យវាតូចពេក */
+        flex-shrink: 0;
     }
     
     .Text-company {
         font-size: 20px;
-        text-align: left; /* តម្រឹមទៅឆ្វេង */
+        text-align: left;
         line-height: 1.2;
-        flex-grow: 1; /* ឱ្យវាយកទំហំដែលនៅសល់ */
+        flex-grow: 1;
     }
     
     .Text-company-1 {
         font-size: 16px;
         text-align: left;
-        width: 100%; /* គ្របដណ្តប់ទទឹងទាំងអស់ */
+        width: 100%;
         display: block;
         margin-top: 5px;
     }
@@ -264,8 +267,8 @@ body {
     }
 }
 
-/* Media Query for Small Mobile (up to 480px) */
-@media (max-width: 480px) {
+/* 3. Small Mobile (415px - 480px) */
+@media (max-width: 480px) and (min-width: 415px) {
     .table-1 th,
     .table-1 td {
         padding: 6px;
@@ -273,11 +276,10 @@ body {
         min-width: 80px;
     }
     
-    /* សម្រាប់ 414px: រក្សាទុក logo នៅខាងឆ្វេង */
     .company-logo-container {
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start; /* ផ្ដើមពីឆ្វេង */
+        justify-content: flex-start;
         gap: 15px;
         padding: 12px 15px;
         flex-wrap: nowrap;
@@ -354,8 +356,8 @@ body {
     }
 }
 
-/* ត្រង់ 414px ជាក់លាក់ */
-@media (max-width: 414px) {
+/* 4. iPhone 6/7/8 Plus (415px) */
+@media (max-width: 414px) and (min-width: 376px) {
     .company-logo-container {
         padding: 10px 12px;
         gap: 12px;
@@ -365,14 +367,17 @@ body {
         width: 35%;
         margin-bottom: -15px;
     }
+    
     .company-logo {
         width: 65px;
         height: 65px;
     }
+    
     .company-logo-container {
         gap: 10px;
         width: 100%;
     }
+    
     .Text-company {
         font-size: 14px;
     }
@@ -381,36 +386,93 @@ body {
         font-size: 15px;
         margin-left: 25px;
     }
+    
+    .table-1 {
+        min-width: 380px;
+    }
 }
-/* ត្រង់ 375px ជាក់លាក់ - កែតែតារាង */
+
+/* 5. iPhone 6/7/8 (375px) */
 @media (max-width: 375px) {
     .table-container {
         width: 95%;
         padding: 0 5px;
         margin: 10px auto;
     }
+    
     .Text-company {
         font-size: 12px;
         margin-left: 5px;
     }
+    
     .Text-company-1 {
         font-size: 13px;
         margin-left: 20px;
     }
+    
     .table-1 {
-        min-width: 360px; /* បន្ថយពី 400px ទៅ 360px */
+        min-width: 360px;
         font-size: 11px;
     }
     
     .table-1 th,
     .table-1 td {
-        padding: 4px 3px; /* ថយកំរិត padding */
+        padding: 4px 3px;
         font-size: 10px;
-        min-width: 70px; /* បន្ថយ min-width */
+        min-width: 70px;
     }
     
     .table-1 th {
         font-size: 11px;
         padding: 5px 4px;
+    }
+    
+    .Pic-pf-1 {
+        width: 40%;
+        max-width: 150px;
+        margin-bottom: 5px;
+    }
+    
+    .company-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .company-logo-container {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+}
+
+/* 6. Very Small Mobile (up to 320px) */
+@media (max-width: 320px) {
+    .table-1 {
+        min-width: 320px;
+    }
+    
+    .table-1 th,
+    .table-1 td {
+        padding: 3px 2px;
+        font-size: 9px;
+        min-width: 60px;
+    }
+    
+    .Text-company {
+        font-size: 11px;
+    }
+    
+    .Text-company-1 {
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    
+    .company-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Pic-pf-1 {
+        width: 50%;
+        max-width: 120px;
     }
 }
