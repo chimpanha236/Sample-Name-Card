@@ -383,7 +383,7 @@ body {
     }
 }
 /* ត្រង់ 375px ជាក់លាក់ - for iphone pro max កែតែតារាង */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .table-container {
         width: 95%;
         padding: 0 5px;
@@ -395,6 +395,39 @@ body {
     }
     .Text-company-1 {
         font-size: 13px;
+        margin-left: 20px;
+    }
+    .table-1 {
+        min-width: 360px; /* បន្ថយពី 400px ទៅ 360px */
+        font-size: 11px;
+    }
+    
+    .table-1 th,
+    .table-1 td {
+        padding: 4px 3px; /* ថយកំរិត padding */
+        font-size: 10px;
+        min-width: 70px; /* បន្ថយ min-width */
+    }
+    
+    .table-1 th {
+        font-size: 11px;
+        padding: 5px 4px;
+    }
+}
+
+/* ត្រង់ 375px ជាក់លាក់ - for iphone pro max កែតែតារាង */
+@media (min-width: 375px) {
+    .table-container {
+        width: 95%;
+        padding: 0 5px;
+        margin: 10px auto;
+    }
+    .Text-company {
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    .Text-company-1 {
+        font-size: 11px;
         margin-left: 20px;
     }
     .table-1 {
