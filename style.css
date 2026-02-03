@@ -267,6 +267,68 @@ body {
     }
 }
 
+/* iPhone 13 (390px × 844px) */
+@media (max-width: 390px) and (min-width: 376px) {
+    .table-container {
+        width: 95%;
+        padding: 0 8px;
+        margin: 15px auto;
+    }
+    
+    .Text-company {
+        font-size: 15px;
+        margin-left: 8px;
+    }
+    
+    .Text-company-1 {
+        font-size: 14px;
+        margin-left: 22px;
+    }
+    
+    .table-1 {
+        min-width: 370px;
+        font-size: 12px;
+    }
+    
+    .table-1 th,
+    .table-1 td {
+        padding: 5px 4px;
+        font-size: 11px;
+        min-width: 75px;
+    }
+    
+    .table-1 th {
+        font-size: 12px;
+        padding: 6px 5px;
+    }
+    
+    .Pic-pf-1 {
+        width: 45%;
+        max-width: 180px;
+        margin-bottom: 8px;
+    }
+    
+    .company-logo {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .company-logo-container {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+    
+    .note-1 {
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    .btn {
+        font-size: 12px;
+        padding: 10px 18px;
+        min-width: 95px;
+    }
+}
 /* 3. Small Mobile (415px - 480px) */
 @media (max-width: 480px) and (min-width: 415px) {
     .table-1 th,
