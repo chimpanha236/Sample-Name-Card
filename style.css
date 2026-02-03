@@ -25,13 +25,12 @@ body {
 
 .table-container {
     width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
+    margin: 0px auto;
     overflow-x: auto;
 }
 
 .table-1 {
-    width: 100%;
+    width: 99%;
     border-collapse: collapse;
     background-color: rgb(1, 60, 1);
     box-shadow: 0 0 5px white;
@@ -126,13 +125,12 @@ body {
 .note-1 {
     color: white;
     font-family: "Siemreap", sans-serif;
-    font-size: 14px;
-    width: 90%;
-    max-width: 860px;
+    font-size: 12px;
+    width: 100%;
     border-radius: 5px;
     padding: 15px;
-    background-color: red;
-    margin: 20px auto;
+    background-color: rgb(246, 2, 2);
+    margin: 0px auto;
     text-align: center;
 }
 
@@ -151,7 +149,7 @@ body {
     font-family: "Siemreap", sans-serif;
     font-size: 14px;
     font-weight: bold;
-    padding: 15px 10px;
+    padding: 10px 5px;
     width: 100%;
     background: linear-gradient(95deg, #2196f3, #9490a5);
     margin-top: 20px;
@@ -387,7 +385,7 @@ body {
 /* ត្រង់ 375px ជាក់លាក់ - កែតែតារាង */
 @media (max-width: 375px) {
     .table-container {
-        width: 100%;
+        width: 95%;
         padding: 0 5px;
         margin: 10px auto;
     }
