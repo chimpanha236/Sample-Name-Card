@@ -354,34 +354,7 @@ body {
     }
 }
 
-/* ត្រង់ 414px ជាក់លាក់ */
-@media (max-width: 414px) {
-    .company-logo-container {
-        padding: 10px 12px;
-        gap: 12px;
-    }
 
-    .Pic-pf-1 {
-        width: 35%;
-        margin-bottom: -15px;
-    }
-    .company-logo {
-        width: 65px;
-        height: 65px;
-    }
-    .company-logo-container {
-        gap: 10px;
-        width: 100%;
-    }
-    .Text-company {
-        font-size: 14px;
-    }
-    
-    .Text-company-1 {
-        font-size: 15px;
-        margin-left: 25px;
-    }
-}
 /* ត្រង់ 375px ជាក់លាក់ - for iphone pro max កែតែតារាង */
 @media (max-width: 376px) {
     .table-container {
