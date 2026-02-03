@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Moul&family=Rubik:ital,wght@0,300..900;1,300..900&family=Siemreap&display=swap');
 
-/* Reset & Base Styles */
+/* 1. ការកំណត់មូលដ្ឋាន */
 * {
     margin: 0;
     padding: 0;
@@ -14,62 +14,63 @@ body {
     font-family: "Siemreap", sans-serif;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: hidden; /* ការពារកុំឱ្យហៀរឆ្វេងស្តាំ */
 }
 
-/* Header - ធានាថាពេញទទឹង និង Notch Support */
+/* 2. Header - កែឱ្យអក្សរតូចល្មម និងពេញអេក្រង់ */
 .company-logo-container {
     background-color: rgb(4, 100, 2);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding: 20px 15px;
-    padding-top: calc(20px + env(safe-area-inset-top)); /* សម្រាប់ក្បាលឆ្មា iPhone */
+    gap: 12px;
+    padding: 15px;
+    /* បន្ថែមចន្លោះសម្រាប់ Notch iPhone */
+    padding-top: calc(15px + env(safe-area-inset-top));
 }
 
 .company-logo {
-    width: 60px;
-    height: 60px;
+    width: 55px; /* បន្ថយទំហំ logo បន្តិច */
+    height: 55px;
     object-fit: contain;
+}
+
+.header-text {
+    flex: 1;
+    max-width: 80%;
 }
 
 .Text-company {
     color: white;
     font-family: "Moul", serif;
-    font-size: clamp(14px, 4.5vw, 24px);
-    line-height: 1.4;
+    font-size: 16px; /* ទំហំអក្សរខ្មែរដែលអ្នកចង់បាន (តូចល្មមស្អាត) */
+    line-height: 1.5;
+    text-align: center;
 }
 
 .Text-company-1 {
     color: white;
-    font-size: clamp(10px, 3vw, 16px);
+    font-size: 11px; /* ទំហំអក្សរអង់គ្លេស */
     display: block;
+    margin-top: 2px;
 }
 
-/* Content Area */
-.content-wrapper {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    padding-bottom: 30px;
-}
-
+/* 3. រូបភាព Profile */
 .Pic-pf-1 {
     display: block;
-    width: 160px;
+    width: 150px;
     height: auto;
-    margin: 25px auto;
+    margin: 20px auto;
     border: 3px solid rgb(3, 123, 1);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Table - ពេញអេក្រង់លើទូរសព្ទ */
+/* 4. តារាងព័ត៌មាន - ពេញអេក្រង់ទូរសព្ទ */
 .table-container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 10px; /* ចន្លោះសងខាងបន្តិច */
     margin-bottom: 20px;
 }
 
@@ -78,19 +79,21 @@ body {
     border-collapse: collapse;
     background-color: rgb(1, 60, 1);
     color: white;
-    border: 1.5px solid white;
+    border: 1px solid white;
 }
 
 .table-1 th, .table-1 td {
-    border: 1.5px solid white;
-    padding: 12px 10px;
-    font-size: 14px;
+    border: 1px solid white;
+    padding: 10px 8px;
+    font-size: 13px;
+    text-align: left;
 }
 
 .table-1 thead th {
     background-color: rgba(0,0,0,0.3);
     font-family: "Moul", serif;
     text-align: center;
+    font-size: 14px;
 }
 
 .label-col {
@@ -98,31 +101,31 @@ body {
     background-color: rgba(255,255,255,0.05);
 }
 
-/* Note */
+/* 5. បំណាច់ (Note) */
 .note-1 {
     background-color: red;
     color: white;
-    margin: 15px;
-    padding: 15px;
+    margin: 10px 10px 20px 10px;
+    padding: 12px;
     border-radius: 6px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
-/* Buttons */
+/* 6. ប៊ូតុង - ងាយស្រួលចុចលើ iPhone */
 .buttongroup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
-    padding: 10px 15px;
+    gap: 10px;
+    padding: 0 10px 20px 10px;
 }
 
 .btn {
     flex: 1;
-    min-width: 130px;
-    max-width: 280px;
+    min-width: 120px;
+    max-width: 100%; /* លើទូរសព្ទឱ្យវាពេញទទឹងបើចាំបាច់ */
     padding: 12px;
     text-decoration: none;
     color: white;
@@ -131,14 +134,9 @@ body {
     border-radius: 50px;
     background: linear-gradient(45deg, #68766c, #03a9f4);
     font-size: 14px;
-    transition: transform 0.2s;
 }
 
-.btn:active {
-    transform: scale(0.95);
-}
-
-/* Footer */
+/* 7. Footer */
 .main-footer {
     width: 100%;
     margin-top: auto;
@@ -147,9 +145,9 @@ body {
 .contact-info {
     color: white;
     text-align: center;
-    font-size: 12px;
-    padding: 15px;
-    line-height: 1.8;
+    font-size: 11px;
+    padding: 10px;
+    line-height: 1.6;
 }
 
 .all-right {
@@ -158,19 +156,21 @@ body {
     color: white;
     text-align: center;
     padding: 15px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
-    padding-bottom: calc(15px + env(safe-area-inset-bottom)); /* សម្រាប់ទូរសព្ទអត់ប៊ូតុងកណ្តាល */
+    /* ទប់ស្កាត់ការបាំងដោយរបារខាងក្រោមរបស់ iPhone */
+    padding-bottom: calc(15px + env(safe-area-inset-bottom));
 }
 
-/* Desktop Styles */
+/* 8. សម្រាប់អេក្រង់ Desktop (កុំព្យូទ័រ) */
 @media (min-width: 768px) {
     .table-container, .note-1 {
-        width: 80%;
-        max-width: 800px;
+        width: 60%;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
     }
-    .company-logo { width: 80px; height: 80px; }
-    .Text-company { font-size: 28px; }
+    .Text-company { font-size: 22px; }
+    .Text-company-1 { font-size: 14px; }
+    .company-logo { width: 70px; height: 70px; }
 }
