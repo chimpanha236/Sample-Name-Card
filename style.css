@@ -72,13 +72,13 @@ body {
 .Text-company {
     color: white;
     font-family: "Moul", serif;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     line-height: 1.2;
 }
 
 .Text-company-1 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Siemreap", sans-serif;
     color: white;
 }
@@ -415,7 +415,7 @@ body {
     }
 }
 
-/* ត្រង់ 375px ជាក់លាក់ - for iphone pro max កែតែតារាង */
+/* ត្រង់ 375px ជាក់លាក់ - for iphone simple កែតែតារាង */
 @media (min-width: 375px) {
     .table-container {
         width: 95%;
