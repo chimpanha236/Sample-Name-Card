@@ -300,3 +300,99 @@ body {
     font-family: "Siemreap";
 }
 }
+
+@media (min-width: 374px) {
+    .Pic-pf-1 {
+        width: 30%;
+    }
+
+    .table-1 th,
+    .table-1 td {
+        padding: 8px;
+        font-size: 10px;
+        min-width: 80px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 11px;
+        min-width: 90px;
+    }
+    .company-logo-container {
+        background-color: rgb(4, 100, 2);
+        display: flex;
+        width: 100%;
+        padding: 10px 5px;
+        gap: 15px;
+    }
+    .Text-company {
+        color: white;
+        font-family: "Moul", serif, "Rubik", sans-serif;
+        font-size: 12px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+    }
+    .Text-company-1 {
+        font-size: 10px;
+    }
+    .company-logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 0%;
+    }
+    .note-1 {
+        width: 340px;
+        font-size: 8px;
+        padding: 10px;
+    }
+    
+    .buttongroup {
+        gap: 5px;
+        margin: 15px auto;
+    }
+    
+    .footer{
+        font-size: 10px;
+        padding: 5px;
+        line-height: 5px;
+    }
+    .all-right {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .table-container {
+    width: 70%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.table-1 {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: rgb(1, 60, 1);
+    box-shadow: 0 0 5px white;
+    margin: 20px 20px auto;
+}
+
+.table-1 th,
+.table-1 td {
+    border: 2px solid white;
+    padding: 0.7vw;
+    text-align: left;
+    min-width: 150px;
+}
+
+.table-1 th {
+    color: white;
+    font-family: "Moul", "Siemreap";
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table-1 td {
+    color: white;
+    font-family: "Siemreap";
+}
+}
