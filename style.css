@@ -382,7 +382,7 @@ body {
         margin-left: 25px;
     }
 }
-/* ត្រង់ 375px ជាក់លាក់ - កែតែតារាង */
+/* ត្រង់ 375px ជាក់លាក់ - for iphone pro max កែតែតារាង */
 @media (max-width: 375px) {
     .table-container {
         width: 95%;
