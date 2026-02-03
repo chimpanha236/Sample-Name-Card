@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Moul&family=Rubik:ital,wght@0,300..900;1,300..900&family=Siemreap&display=swap');
 
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,121 +12,165 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Siemreap", sans-serif;
-    /* បន្ថែម padding សម្រាប់ iPhone Notch */
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-/* Header - ឱ្យពេញទទឹង ១០០% */
+/* Header - ធានាថាពេញទទឹង និង Notch Support */
 .company-logo-container {
     background-color: rgb(4, 100, 2);
+    width: 100%;
     display: flex;
-    width: 100%; 
-    padding: 20px 10px;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    padding: 20px 15px;
+    padding-top: calc(20px + env(safe-area-inset-top)); /* សម្រាប់ក្បាលឆ្មា iPhone */
 }
 
 .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
 .Text-company {
     color: white;
     font-family: "Moul", serif;
-    font-size: 20px;
-    text-align: center;
+    font-size: clamp(14px, 4.5vw, 24px);
+    line-height: 1.4;
 }
 
-/* រូបថត Profile */
+.Text-company-1 {
+    color: white;
+    font-size: clamp(10px, 3vw, 16px);
+    display: block;
+}
+
+/* Content Area */
+.content-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+
 .Pic-pf-1 {
     display: block;
-    width: 150px; /* កំណត់ទំហំថេរសម្រាប់ទូរសព្ទ */
+    width: 160px;
     height: auto;
-    margin: 20px auto;
+    margin: 25px auto;
     border: 3px solid rgb(3, 123, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* តារាង - នេះជាចំណុចសំខាន់ដើម្បីឱ្យពេញអេក្រង់ */
+/* Table - ពេញអេក្រង់លើទូរសព្ទ */
 .table-container {
-    width: 100%; /* ដូរពី 70% មក ១០០% សម្រាប់ទូរសព្ទ */
-    padding: 0 10px; /* បន្ថែមចន្លោះសងខាងបន្តិច */
-    margin: 20px 0;
-    overflow-x: auto;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 20px;
 }
 
 .table-1 {
     width: 100%;
     border-collapse: collapse;
     background-color: rgb(1, 60, 1);
+    color: white;
+    border: 1.5px solid white;
 }
 
 .table-1 th, .table-1 td {
-    border: 1px solid white;
-    padding: 10px;
-    color: white;
-    font-size: 13px;
-    min-width: 100px;
-}
-
-/* ប៊ូតុង */
-.buttongroup {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding: 15px;
-    width: 100%;
-}
-
-.btn {
-    flex: 1; /* ឱ្យប៊ូតុងរីកពេញតាមទំហំអេក្រង់ */
-    min-width: 140px;
-    max-width: 200px;
-    padding: 12px;
-    text-align: center;
-    background: linear-gradient(45deg, #68766c, #03a9f4);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
+    border: 1.5px solid white;
+    padding: 12px 10px;
     font-size: 14px;
 }
 
-/* Note ក្រហម */
+.table-1 thead th {
+    background-color: rgba(0,0,0,0.3);
+    font-family: "Moul", serif;
+    text-align: center;
+}
+
+.label-col {
+    width: 40%;
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Note */
 .note-1 {
     background-color: red;
     color: white;
     margin: 15px;
     padding: 15px;
-    border-radius: 8px;
-    font-size: 13px;
+    border-radius: 6px;
     text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.buttongroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 15px;
+}
+
+.btn {
+    flex: 1;
+    min-width: 130px;
+    max-width: 280px;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #68766c, #03a9f4);
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 /* Footer */
-.all-right {
-    background: linear-gradient(95deg, #2196f3, #9490a5);
-    color: white;
-    padding: 20px;
-    text-align: center;
+.main-footer {
     width: 100%;
-    font-size: 13px;
+    margin-top: auto;
 }
 
-/* Media Query សម្រាប់ Desktop (អេក្រង់ធំ) */
-@media (min-width: 1024px) {
-    .table-container {
+.contact-info {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    line-height: 1.8;
+}
+
+.all-right {
+    width: 100%;
+    background: linear-gradient(95deg, #2196f3, #9490a5);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: calc(15px + env(safe-area-inset-bottom)); /* សម្រាប់ទូរសព្ទអត់ប៊ូតុងកណ្តាល */
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .table-container, .note-1 {
         width: 80%;
-        margin: 20px auto;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .company-logo-container {
-        padding: 30px;
-    }
-    .Text-company {
-        font-size: 30px;
-    }
+    .company-logo { width: 80px; height: 80px; }
+    .Text-company { font-size: 28px; }
 }
